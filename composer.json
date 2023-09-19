@@ -1,0 +1,26 @@
+{
+  "name": "d3yii2/d3icon",
+  "description": "Yii2 module for SVG and Font Awesome icons",
+  "type": "library",
+  "keywords": [
+    "yii2",
+    "svg",
+    "icons"
+  ],
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Lauris Mierkalns",
+      "email": "ikdienailv@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/font-awesome": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "d3yii2\\d3icon\\": ""
+    }
+  }
+}
