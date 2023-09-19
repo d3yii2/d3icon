@@ -18,9 +18,9 @@ class Icon
      * @param string $type
      * @return string|void
      */
-    public static function svg($name)
+    public static function svg($name, $options = [])
     {
-        return D3Icon::render($name, D3Icon::TYPE_SVG);
+        return D3Icon::render($name, D3Icon::TYPE_SVG, $options);
     }
 
     /**
@@ -28,8 +28,8 @@ class Icon
      * @param string $type
      * @return string|void
      */
-    public static function fa($name)
+    public static function fa($name, $options = [])
     {
-        return D3Icon::render($name, D3Icon::TYPE_FONTAWESOME);
+        return D3Icon::render($name, D3Icon::TYPE_FONTAWESOME, $options);
     }
 }
