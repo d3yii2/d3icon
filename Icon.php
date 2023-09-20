@@ -2,6 +2,9 @@
 
 namespace d3yii2\d3icon;
 
+use d3yii2\d3icon\components\D3IconFa;
+use d3yii2\d3icon\components\IconFa;
+use d3yii2\d3icon\components\IconSvg;
 use IconAsset;
 use Yii;
 use yii\helpers\Html;
@@ -20,7 +23,9 @@ class Icon
      */
     public static function svg($name, $options = [])
     {
-        return D3Icon::render($name, D3Icon::TYPE_SVG, $options);
+        $icon = new IconSvg();
+        
+        return $icon->render($name, $options);
     }
 
     /**
@@ -28,8 +33,10 @@ class Icon
      * @param string $type
      * @return string|void
      */
-    public static function fa($name, $options = [])
+    public static function fa($name, $type = IconFa::TYPE_SOLID, $options = [])
     {
-        return D3Icon::render($name, D3Icon::TYPE_FONTAWESOME, $options);
+        $icon = new IconFa();
+        
+        return $icon->render($name, $type, $options);
     }
 }
