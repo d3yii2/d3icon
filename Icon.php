@@ -13,6 +13,7 @@ use yii\base\Exception;
 class Icon
 {
 
+    public const TYPE_GLYPHICON = 'glyphicon';
     public const TYPE_SVG = 'svg';
     public const TYPE_FA = 'fa';
 
