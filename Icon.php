@@ -2,13 +2,9 @@
 
 namespace d3yii2\d3icon;
 
-use d3yii2\d3icon\components\D3IconFa;
 use d3yii2\d3icon\components\IconFa;
 use d3yii2\d3icon\components\IconSvg;
-use IconAsset;
-use Yii;
-use yii\helpers\Html;
-use d3yii2\d3icon\components\D3Icon;
+use yii\base\Exception;
 
 /**
  * Class Icon
@@ -16,27 +12,46 @@ use d3yii2\d3icon\components\D3Icon;
  */
 class Icon
 {
+
+    public const TYPE_SVG = 'svg';
+    public const TYPE_FA = 'fa';
+
     /**
-     * @param $name
-     * @param string $type
-     * @return string|void
+     * @throws Exception
      */
-    public static function svg($name, $options = [])
+    public static function icon(string $type, string $name, array $options = []): ?string
     {
-        $icon = new IconSvg();
-        
-        return $icon->render($name, $options);
+        if ($type === self::TYPE_SVG) {
+            return self::svg($name, $options);
+        }
+        if ($type === self::TYPE_FA) {
+            return self::fa($name, $options);
+        }
+        throw new Exception('Undefined icon type: ' . $type);
     }
 
     /**
-     * @param $name
-     * @param string $type
-     * @return string|void
+     * @param string $name
+     * @param array $options
+     * @return string
      */
-    public static function fa($name, $type = IconFa::TYPE_SOLID, $options = [])
+    public static function svg(string $name, array $options = []): string
     {
-        $icon = new IconFa();
-        
-        return $icon->render($name, $type, $options);
+        return (new IconSvg())->render($name, $options);
+    }
+
+    /**
+     * @param string $name
+     * @param array $options
+     * @param string $type
+     * @return string
+     */
+    public static function fa(
+        string $name,
+        array $options = [],
+        string $type = IconFa::TYPE_SOLID
+    ): string
+    {
+        return (new IconFa())->render($name, $type, $options);
     }
 }
