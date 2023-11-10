@@ -62,6 +62,7 @@ class IconSvg extends Component
     public const STAR_1 = 'star-1';
     public const STAR_1_SOLID = 'star-1-solid';
     public const TRASH = 'trash-4';
+    public const USER = 'user';
     public const USER_PLUS_2 = 'user-plus-2';
     public const USERS_1 = 'users-1';
     public const USERS_LEFT = 'users-left';
