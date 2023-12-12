@@ -69,6 +69,11 @@ class IconSvg extends Component
     public const X_CIRCLE_SOLID = 'x-circle-solid';
     public const X_CLOSE = 'x-close';
 
+    public const SOCIAL_TELEGRAM = 'telegram';
+    public const SOCIAL_VKONTAKTE = 'vkontakte';
+    public const SOCIAL_WHATSAPP = 'whatsapp';
+    public const SOCIAL_INSTAGRAM = 'instagram';
+
     /**
      * @return string|void
      */
