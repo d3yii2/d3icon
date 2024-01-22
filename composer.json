@@ -17,11 +17,7 @@
   "require": {
     "yiisoft/yii2": "*",
     "bower-asset/font-awesome": "*",
-    "mono-company/mono-icons": "*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mono-company/mono-icons.git"
+    "npm-asset/mono-icons": "*"
   },
   "autoload": {
     "psr-4": {
