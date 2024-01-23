@@ -203,6 +203,8 @@ class IconMonoSvg extends Component
         }
         
         Html::addCssClass($options, 'mi-' . $name);
+        
+        Html::addCssClass($options, 'mx-1');
 
         self::$isLoaded = true;
         
